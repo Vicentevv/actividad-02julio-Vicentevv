@@ -5,7 +5,7 @@
 from django.urls import path
 # se importa las vistas de la aplicación
 from . import views
-
+from .views import lista_telefonos
 
 urlpatterns = [
         path('', views.index, name='index'),
@@ -25,4 +25,5 @@ urlpatterns = [
         path('crear/numero/telefonico/estudiante/<int:id>', 
             views.crear_numero_telefonico_estudiante, 
             name='crear_numero_telefonico_estudiante'),
- ]
+        path('telefonos/', lista_telefonos, name='lista_telefonos'),
+]
