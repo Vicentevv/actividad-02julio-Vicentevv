@@ -137,4 +137,4 @@ def crear_numero_telefonico_estudiante(request, id):
 
 def lista_telefonos(request):
     telefonos = NumeroTelefonico.objects.select_related('estudiante').all()
-    return render(request, 'administrativo/lista.html', {'telefonos': telefonos})
+    return render(request, 'administrativo/lista_telefonos.html', {'telefonos': telefonos})
